@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const articleRoutes = require("./routes/articleRoutes");
+const { Article } = require("./models/articleModel");
 
 const app = express();
 
@@ -20,16 +21,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/articles", articleRoutes);
-
-// Article.findOneAndUpdate(
-//   { title: "Is AI the Fall of Man" },
-//   { title: "Is AI the Fall of Man?" },
-//   {
-//     returnOriginal: false,
-//   }
-// ).then(() => {
-//   console.log("yes");
-// });
 
 mongoose
   .connect(
