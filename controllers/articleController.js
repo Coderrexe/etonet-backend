@@ -52,6 +52,7 @@ async function createArticle(req, res) {
   }
 }
 
+// Edit an article (admin only).
 async function editArticle(req, res) {
   if (req.body.password == "password") {
     let article = await Article.findById(req.params.articleId);

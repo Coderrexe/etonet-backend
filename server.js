@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const articleRoutes = require("./routes/articleRoutes");
-const { Article } = require("./models/articleModel");
 
 const app = express();
 
@@ -36,19 +35,3 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
-// app.get("/category", (req, res) => {
-//   res.send("asdf");
-// });
-
-// app.get("/category/:categoryName", (req, res) => {
-//   res.send(req.params.categoryName);
-// });
-
-// app.get("/memes", (req, res) => {
-//   res.render("memes");
-// });
-
-// app.use((req, res, next) => {
-//   res.status(404).send("Page not found");
-// });

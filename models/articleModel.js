@@ -5,11 +5,12 @@ const { marked } = require("marked");
 const createDomPurifier = require("dompurify");
 const { JSDOM } = require("jsdom");
 
+// Empty line between paragraphs.
 marked.setOptions({
   breaks: true,
 });
 
-// Allows dompurifier to create  and purify HTML using the JSDOM window object.
+// Allows DomPurifier to create and purify HTML using the JSDOM window object.
 const dompurify = createDomPurifier(new JSDOM().window);
 
 const articleSchema = new mongoose.Schema(

@@ -17,6 +17,7 @@ router.get("/:articleId", getArticle);
 // Post a new article (admin only).
 router.post("/new", createArticle);
 
+// Edit an article (admin only).
 router.post("/:articleId/edit", editArticle);
 
 module.exports = router;
